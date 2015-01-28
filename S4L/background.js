@@ -40,32 +40,6 @@ function setData(key, value) {
 	chrome.storage.sync.set(jsonVar, function() {});
 }
 
-// function getData(cookieName) {
-	// var retVal = "";
-	// var cookies = document.cookie;
-	// if (cookies != null && cookies != "") {
-		// ....|cookieName=value;....
-		// var indexOfCookieBegin = cookies.indexOf(cookieName);
-		// if (indexOfCookieBegin >= 0) {
-			// ....cookieName=|value;....
-			// indexOfCookieBegin += cookieName.length + 1;
-			// ....cookieName=value|;....
-			// var indexOfCookieEnd = cookies.indexOf(";", indexOfCookieBegin);
-			// indexOfCookieEnd = indexOfCookieEnd == -1 ? cookies.length : indexOfCookieEnd;
-			// retVal = cookies.substring(indexOfCookieBegin, indexOfCookieEnd).trim();
-		// }
-	// }
-	// return retVal;
-// }
-
-// function setData(name, value) {
-	// var days = 365;
-    // var date = new Date();
-	// date.setTime(date.getTime()+(days*24*60*60*1000));
-	// var expires = "; expires="+date.toGMTString();
-    // document.cookie = name+"="+value+expires+"; path=/";
-// }
-
 function setBadgeText(badgeText) {
 	chrome.browserAction.setBadgeText ( { text: badgeText + "" } );
 }
@@ -94,7 +68,7 @@ function checkAtStartup() {
 
 //----actual code begins here----
 chrome.runtime.onInstalled.addListener(function() {
-	resetExtension();
+	checkAtStartup();
 });
 chrome.runtime.onStartup.addListener(function(){
 	checkAtStartup();
