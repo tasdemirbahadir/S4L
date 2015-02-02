@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script src="scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+		<script src="scripts/donotaddlistener.js" type="text/javascript"></script>
+		<script src="scripts/background.js" type="text/javascript"></script>
+        <script src="scripts/popup.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"></link>
+		<style>
+			.trancate {
+				white-space: nowrap; 
+				width: 40em; 
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		</style>
+    </head>
+    <body>
+		<div>
+			<table align="center" border="1">
+				<tbody>
+					<tr>
+						<td align="center">
+							<input title="store all tabs" type="image" id="btStore" src="images/store.png" width="30" height="57"/>
+						</td>
+						<td align="center">
+							<input title="restore all tabs" type="image" id="btRestore" src="images/restore.png" width="30" height="57"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<p class="trancate" id="alertText" style="color:red"></p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<table id="storedWebPages">
+								<tbody>
+									
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+    </body>
+</html>

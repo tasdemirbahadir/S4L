@@ -3,7 +3,7 @@
 
   "name": "S4L",
   "description": "This extension lets you to save your tabs for later checks.",
-  "version": "1.0.3",
+  "version": "1.2.2",
   "permissions": [
     "tabs",
 	"storage",
@@ -11,7 +11,7 @@
   ],
   "background": {
     "persistent": false,
-	"scripts": ["background.js"]
+	"scripts": ["scripts/background.js"]
   },
   "icons":
   {
@@ -20,6 +20,8 @@
     "48": "icons/restore48.png"
   },
   "browser_action": {
-    "default_icon": "icons/store.png"
+    "default_icon": "icons/store.png",
+    "default_popup": "popup.html",
+    "default_title": "Manage your web page collection!"
   }
 }
