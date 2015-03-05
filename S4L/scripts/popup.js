@@ -99,7 +99,7 @@ $( document ).ready(function(){
 			getStoredTabUrls(function(tabUrls) {
 				for (var i = 0; i < tabUrls.length; i++) {
 					if (tabUrls[i] != "") {
-						$("#storedWebPages").append("<tr id='datarow" + i + "'><td align='center'><a target='_blank' href='" + tabUrls[i] +"'><p class='truncate'>" + tabUrls[i] + "</p></a></td><td align='center'><img id='" + i + "' data='" + tabUrls[i] + "' title='extract this tab' class='extracttab' src='images/extract.png'/></td></tr>");
+						$("#storedWebPages").append("<tr id='datarow" + i + "'><td align='center'><a target='_blank' href='" + tabUrls[i] +"'><p class='trancate'>" + tabUrls[i] + "</p></a></td><td align='center'><img id='" + i + "' data='" + tabUrls[i] + "' title='extract this tab' class='extracttab' src='images/extract.png'/></td></tr>");
 					}
 				}
 				$(".extracttab").on("click", function(e){
